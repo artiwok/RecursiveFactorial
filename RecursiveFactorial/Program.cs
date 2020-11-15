@@ -11,18 +11,16 @@ namespace RecursiveFactorial
         static int Factorial(int x)
         {
             if (x == 0)
+            {
                 return 1;
+            }    
 
-            int result = x;
-
-            result *= Factorial(x - 1);
-
-            return result;
+            return x *= Factorial(x - 1);
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Factorial(7));
+            Console.WriteLine(Factorial(4));
         }
     }
 }
